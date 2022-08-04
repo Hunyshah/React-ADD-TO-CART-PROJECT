@@ -1,0 +1,30 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 1%;
+    border-bottom: 2px solid darkblue;
+    padding-bottom: 2%;
+
+}
+.headerh1{
+    font-size: 30px;
+    color: black;
+    padding: 1%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.headerbutton{
+    
+    cursor: pointer;
+    border-radius: 11%;
+    font-size: 81%;
+    padding: 0% 2%;
+    font-family: fantasy;
+    background-color: aqua;
+}
+:hover.headerbutton{
+    zoom: 50%;
+}
+.hspan{
+font-size: xx-large;
+color: chocolate;
+}

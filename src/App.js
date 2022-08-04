@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Header from "./components/layouts/header";
+import Meals from './components/layouts/meals';
+import Cart from "./components/cart";
+import CartProvider from "./store/cartProvider";
+import {useState} from 'react'
 function App() {
+  const[updatestae,setupdatestate]=useState(false);
+  const btnopenhandler=()=>{
+    setupdatestate(true)
+  }
+  const btnclosehandler=()=>{
+    setupdatestate(false)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CartProvider>
+      {updatestae && < Cart onhidehandler ={btnclosehandler}/>}
+      <Header onshowhandler={btnopenhandler}/>
+      <Meals/>
+      </CartProvider>
   );
 }
 
